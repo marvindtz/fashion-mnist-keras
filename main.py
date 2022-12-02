@@ -25,8 +25,9 @@ test_images = test_images / 255.0
 
 model = tf.keras.Sequential([
     tf.keras.layers.Input(shape=(784)),
-    tf.keras.layers.Dense(128, activation='relu'),
-    tf.keras.layers.Dense(10)
+    tf.keras.layers.Dense(64, activation='relu'),
+    tf.keras.layers.Dense(10),
+    tf.keras.layers.Softmax()
 ])
 
 model.summary()
